@@ -1,0 +1,84 @@
+.DecouvrirApp-Container{
+    position: relative;
+    width: 74vw;
+    height: 180px;
+    background: #F4F7F2;
+    margin-left: 3%;
+    border-radius: 5px;
+    display: flex;
+    // background: url("items.png") url("save\ money.png") url("delivery\ truck.png") url("headphones.png");
+    .ServicesApp{
+        width: 60%;
+        padding: 40px 0 10px 40px;
+        display: flex;
+        div{
+            width: 23%;
+            margin: 0 1%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow: hidden;
+            box-sizing: border-box;
+            img{
+                position: relative;
+                height: 60px;
+                width: 60px;
+            }
+            p{
+                margin: 6px 0 0 0;
+                font-weight: 600;
+                font-size: 13px;
+                color: rgba(0, 0, 0, 0.8);
+                text-align: center;
+            }
+        }
+    }
+    .OffreApp{
+        display: block;
+        width: 40%;
+        padding: 10px 10px 10px 10px;
+        .Offre{
+            position: relative;
+            top: 60%;
+            height: 40%;
+            background: darkkhaki;
+            border-radius: 1% / 5%;
+            p{
+                padding: 6px 0 0 10px;
+                margin: 0;
+                color: darkred;
+                font-size: 15px;
+                font-weight: 600;
+            }
+        }
+        .Login{
+            position: relative;
+            height: 60%;
+            width: 75%;
+            left: 25%;
+            padding: 10px 10px 0 0;
+            margin: 0;
+            p{
+                padding: 0;
+                margin: 0;
+                font-size: 17px;
+                font-weight: 600;
+                color: rgba(0, 0, 0, 0.8);
+            }
+            button{
+                position: relative;
+                float: right;
+                top: 0%;
+                left: -50%;
+                height: 35px;
+                width: 45%;
+                font-size: 15px;
+                font-weight: 500;
+                background: transparent;
+                color: rgba(0, 0, 0, 0.8);
+                border: 1.5px solid rgba(189, 183, 107, 0.3);
+                border-radius: 5% / 15%;  
+            }
+        }
+    }
+}

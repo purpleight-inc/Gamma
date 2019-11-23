@@ -1,0 +1,132 @@
+.Slider-Container{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 460px;
+    background: #E83114;
+    z-index: 1;
+    // z-index: 0;
+    // &:before{
+    //     content: "";
+    //     position: absolute;
+    //     top: 0;
+    //     left: -100%;
+    //     width: 100vw;
+    //     height: 460px;
+    //     background: #895737;
+    //     z-index: 1;
+    //     transition: left 2s ease;
+    // }
+    // &:hover{ 
+    //     &:before{
+    //         left: 0%;
+    //     }
+    // }
+    .SlideTop{
+        position: absolute;
+        top: 0;
+        left: 75%;
+        width: 15vw;
+        height: 270px;
+        background: #272838;
+        // background: url("milka.jpg") no-repeat center/cover;
+    }
+    .SlideBottom{
+        position: absolute;
+        top: 33%;
+        left: 5%;
+        width: 50vw;
+        height: 340px;
+        background: #272838;
+        // background: url("milka2.jpg") no-repeat center/cover;
+    }
+    .SlideTxt{
+        position: absolute;
+        top: 45%;
+        left: 45%;
+        width: 48vw;
+        height: 230px;
+        // text-shadow: -2px 2px 5px rgba(0, 0, 0, 0.7);
+
+        p{
+            position: relative;
+            color: cornsilk;
+            padding: 5px 0 0 10%;
+            font-size: larger;
+            margin: 0;
+        }
+        .Subject{
+            position: relative;
+            max-width: 31vw;
+            max-height: 48px;
+            height: auto;
+            width: auto;
+            h1{
+                color: white;
+            }
+            
+        }
+        .About-Subject{
+            position: relative;
+            width: 48vw;
+            height: 149px;
+            padding: 8px 0 0 28%;
+            p{
+                position: relative;
+                color: cornsilk;
+                font-size: larger;
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+            button{
+                position: relative;
+                float: right;
+                top: 0%;
+                height: 40px;
+                width: 30%;
+                background: transparent;
+                color: cornsilk;
+                border: 1.5px solid cornsilk;
+                border-radius: 5% / 15%;
+               
+                span{
+                    position: absolute;
+                    width: 0%;
+                    height: 1.5px;
+                    top: 50%;
+                    left: 0%;
+                    background: cornsilk;
+                    transition: all 0.1s ease-in;
+                }
+                &:after{
+                    content:"";
+                    clear: both;
+                }
+                &:focus{outline: 0;}
+                &:hover{
+                    span{
+                        width: 10%;
+                    }
+                }
+            }
+        }
+    }
+    .WelcomeTxt{
+        position: absolute;
+        top: 7%;
+        left: 5%;
+        p{
+            margin: 0;
+            color: cornsilk;
+            font-size: x-large;
+            font-weight: 500;
+            line-height: 100%;
+            &:first-child{
+                font-size: xx-large;
+                font-weight: 600;
+            }
+        }
+    }
+}

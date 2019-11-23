@@ -1,0 +1,259 @@
+.items-Container{
+    position: relative;
+    width: 74vw;
+    height: auto;
+    min-height: 100vh;
+    margin: 20px 0 0 3%;
+    padding: 0 1.5vw;
+    background: #F4F7F2;
+    border-radius: 5px;
+    // box-shadow: 0 0 1px  rgba(0, 0, 0, 0.4);
+    display: grid;
+    grid-template-columns: 100%;
+    
+    .items-Header{
+        position: relative;
+        width: 100%;
+        height: 75px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        p{
+            // position: relative;
+            // align-self: center;
+            margin: 5px 0 0 5px;
+            font-weight: 600;
+            font-size: 22px;
+        }
+        span{
+            // position: relative;
+            width: 100%;
+            height: 4px;
+            background: rgba(0,0,0,0.5);
+        }
+    }
+    .items-Section{
+        position: relative;
+        width: 100%;
+        height: auto;
+        min-height: 200px;
+        padding-bottom: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        transition: height 0.5s linear;
+        // justify-content: space-between;
+        .item{
+            position: relative;
+            width: 16.4vw;
+            height: 320px;
+            margin: 1vw 1.2vw 0 0;
+            background: url("../../assets/images/itemsSection/patate.jpg") no-repeat center/cover;
+            // background: chocolat;
+            overflow: hidden;
+            &:hover{
+                .icon-Bar{
+                    height: 180px;
+                    .AddBasket{
+                        top: 0%;
+                    }
+                }
+                .Description{
+                    .SousName{opacity: 1;}
+                    .Tarif{opacity: 1;}
+                    .AncienTarif{opacity: 1;}
+                    .Promo{opacity: 1;}
+                }
+                .item-Header{
+                    img{top: 2%; cursor: pointer; }
+                }
+            }
+            .item-Header{
+                position: relative;
+                width: 100%;
+                height: 35px;
+                background: rgba(255,255,255,0.5);
+                padding: 0 5px 0 10px;
+                overflow: hidden;
+                img{
+                    position: relative;
+                    width: 22px;
+                    height: 22px;
+                    float: right;
+                    top: -100%;
+                    transition: top 0.3s ease;
+                }
+                p{
+                    position: relative;
+                    margin: 0;
+                    float: left;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+            }
+            .icon-Bar{
+                position: relative;
+                width: 100%;
+                height: 215px;
+                transition: all 0.3s ease;
+                display: flex;
+                padding-bottom: 5px;
+                overflow: hidden;
+                // background: url("minusSymbol.png") url("plusSymbol.png") url("shoppingCart.png") url("sugar-free.png");
+                .mention{
+                    position: relative;
+                    width: 60%;
+                    display: flex;
+                    align-items: flex-end;
+                    padding: 0 5px 5px 10px;
+                    img{
+                        width: 25px;
+                        height: 25px;
+                        margin-right: 5px;
+                    }
+                }
+                .AddBasket{
+                    align-self: flex-end;
+                    padding: 0 10px 0 0;
+                    position: relative;
+                    width: 40%;
+                    top: 200%;
+                    transition: all 0.6s linear;
+                    .Cart{
+                        position: relative;
+                        left: 100%;
+                        transform: translateX(-100%);
+                        width: 30px;
+                        height: 30px;
+                        margin: 0 0px 5px 0;
+                        // transition: all 0.3s ease;
+                        // transition-delay: 0.3s ;
+                    }
+                    .BasketControl{
+                        position: relative;
+                        display: flex;
+                        justify-content: space-between;
+                        height: 0px;
+                        overflow: hidden;
+                        transition: all 0.1s ease;
+                        div{
+                            position: relative;
+                            width: 25px;
+                            height: 25px;
+                            align-self: center;
+                            user-select: none;
+                            &:first-child,&:last-child{
+                                background: rgba(255,255,255,0.5);
+                                border-radius: 10%;
+                                box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+                                margin: 2px;
+                                cursor: pointer;
+                            }
+                            img{
+                                width: 17px;
+                                height: 17px;
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+                            }
+                            p{
+                                text-align: center;
+                                width: 25px;
+                                height: 25px;
+                                cursor: default;
+                            }
+                        }
+                    }
+                }
+
+            }
+            .Description{
+                position: relative;
+                width: 100%;
+                height: 105px;
+                background: rgba(255,255,255,0.6);
+                p{
+                    margin: 0;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    cursor: default;
+                }
+                .Name{
+                    padding: 5px 5px 0 10px;
+                    font-weight: 600;
+                    font-size: 15px;
+                    max-height: 50px;
+                    // a{
+                    //     text-decoration: none;
+                    // }
+                    // &:hover{
+
+                    // }
+                }
+                .SousName{
+                    padding: 2px 5px 0 25px;
+                    font-size: 13px;
+                    opacity: 0;
+                    transition: all 0.3s ease;
+                    transition-delay: 0.22s;
+                }
+                .Tarif{
+                    position: absolute;
+                    padding: 0 5px 0 10px;
+                    font-weight: 600;
+                    bottom: 15%;
+                    right: 0;
+                    opacity: 0;
+                    transition: all 0.3s ease;
+                    transition-delay: 0.22s;
+                }
+                .AncienTarif{
+                    position: absolute;
+                    padding: 0 5px 0 10px;
+                    font-size: 13px;
+                    bottom: 0;
+                    right: 0;
+                    text-decoration: line-through;
+                    opacity: 0;
+                    transition: all 0.3s ease;
+                    transition-delay: 0.22s;
+                }
+                .Promo{
+                    position: absolute;
+                    font-size: 13px;
+                    padding: 0 5px 0 10px;
+                    bottom: 5%;
+                    opacity: 0;
+                    transition: all 0.3s ease;
+                    transition-delay: 0.22s;
+                }
+            }
+        }
+        .pub{
+            position: relative;
+            width: 34.1vw;
+            height: 320px;
+            margin: 1vw 1.2vw 0 0;
+            background: crimson;
+        }    
+        .More{
+            position: absolute;
+            width: 100%;
+            height: 40px;
+            top: 97%;
+            background: transparent;
+            z-index: 1;
+            &:hover{
+                background: rgba(0,0,0,0.3);
+                cursor: pointer;
+            }
+            p{
+                position: absolute;
+                margin: 0;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+            }
+        }
+    }
+}

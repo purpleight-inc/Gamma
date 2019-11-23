@@ -1,0 +1,234 @@
+<div class="Custom-Navbar">
+    <div class="logo">    
+        <img class="img-nav" src="../assets/images/navbar/moon.png">
+        <a href="#">Logo</a>
+    </div>
+    <div class="Head-nav">
+        <div class="SearchB"
+        [@ExpandSearchContainer]="SearchItemsDisplay ? 'expanded' : 'collapsed'">
+             <input (focus)="focus()" (blur)="blur()" 
+             type="text" class="SearchIn" placeholder="Recherche Produit">
+             <div class="Img-Container"><img src="../assets/images/navbar/Loupe.png"></div>
+             <div *ngIf="SearchItemsDisplay" class="SearchItems-Container">
+                <!-- <p *ngFor="let item of items">{{ item }}</p> -->
+                <a href="#">Coca Cola</a>
+                <a href="#">Pepsi</a>
+                <a href="#">Merinda</a>
+                <a href="#">Sprite</a>
+            </div>
+        </div>
+        <div class="Basket">
+            <a href="#" class="">
+            <img src="../assets/images/navbar/Basket.png" alt="" class="">
+            </a>
+        </div>
+    </div>
+    <div class="Container-NavItems">
+        <ul class="NavItems">
+            <li>
+                <img src="../assets/images/navbar/heart.png">
+                <a href="#" (click)="MenuDisplay('NosRayons')">Nos Rayons</a>
+                <div class="NosRayons-Menu"
+                [@ExpandMenuRayon]="(RayonsDisplay && SelectedMenu == 'NosRayons')? 'expanded' : 'collapsed'">
+                    <span></span>
+                    <img src="cancel.png">
+                    <div class="Section">
+
+                        <!-- 1 -->
+                        <div class="Rayon-Container" (mouseenter)="Mousein('Meat & Fish')" (mouseleave)="Mouseout()">
+                            <h1>Meat & Fish</h1>
+                            <!-- <img src="../assets/images/navbar/poisson3.jpg"> -->
+                            <ul [@RayonContainerAnim]="RayonContainerDisplay && SelectedRayon=='Meat & Fish' ? 'expanded' : 'collapsed'">
+                                <li><p>Poulets</li>
+                                <li><p>Dinde</p></li>
+                                <li><p>Boeuf</p></li>
+                                <li><p>Veau</p></li>
+                                <li><p>Poisson Frais</p></li>
+                            </ul>
+                        </div>
+                        
+                        <!-- 2 -->
+                        <div class="Rayon-Container" (mouseenter)="Mousein('Boissons')" (mouseleave)="Mouseout()">
+                            <h1>Boissons</h1>
+                            <!-- <img src="../assets/images/navbar/boisson.jpg"> -->
+                            <ul [@RayonContainerAnim]="RayonContainerDisplay && SelectedRayon=='Boissons' ? 'expanded' : 'collapsed'">
+                                <li><p>Eau</p></li>
+                                <li><p>The</p></li>
+                                <li><p>Café</p></li>
+                                <li><p>Jus de fruits</p></li>
+                                <li><p>Boisson Gazeuse</p></li>
+                                <li><p>Sirop et Boissons concentrée</p></li>
+                                <li><p>Boisson energitique</p></li>
+                            </ul>
+                        </div>
+
+                        <!-- 3 -->
+                        <div class="Rayon-Container" (mouseenter)="Mousein('Entretien & Nettoyage')" (mouseleave)="Mouseout()">
+                            <h1>Entretien & Nettoyage</h1>
+                            <!-- <img src="../assets/images/navbar/entretien.jpg"> -->
+                            <ul [@RayonContainerAnim]="RayonContainerDisplay && SelectedRayon=='Entretien & Nettoyage' ? 'expanded' : 'collapsed'">
+                                <li><p>Lessives et soin linge</p></li>
+                                <li><p>Papier toilette, Essuie-tout</p></li>
+                                <li><p>Desodorisants</p></li>
+                                <li><p>Insecticides</p></li>
+                                <li><p>Produits vaisselle et nettoyants</p></li>
+                                <li><p>Autres accessoires d'entretien</p></li>
+                            </ul>
+                        </div>
+
+                        <!-- 4 -->
+                        <div class="Rayon-Container" (mouseenter)="Mousein('Fruit & Legumes')" (mouseleave)="Mouseout()">
+                            <h1>Fruit & Legumes</h1>
+                            <!-- <img src="../assets/images/navbar/legume3.jpg"> -->
+                            <ul [@RayonContainerAnim]="RayonContainerDisplay && SelectedRayon=='Fruit & Legumes' ? 'expanded' : 'collapsed'">
+                                <li><p>Fruit et Legumes sec</p></li>
+                                <li><p>Fruit Frais</p></li>
+                                <li><p>Legumes Frais</p></li>
+                                <li><p>Fleurs et Plantes</p></li>
+                                <li><p>Panier fruits et legumes</p></li>
+                            </ul>
+                        </div>
+
+                        <!-- 5 -->
+                        <div class="Rayon-Container" (mouseenter)="Mousein('Epicerie Sucrée, Boulangerie')" (mouseleave)="Mouseout()">
+                            <h1>Epicerie Sucrée, Boulangerie</h1>
+                            <!-- <img src="../assets/images/navbar/sucree3.jpg"> -->
+                            <ul [@RayonContainerAnim]="RayonContainerDisplay && SelectedRayon=='Epicerie Sucrée, Boulangerie' ? 'expanded' : 'collapsed'">
+                                <li><p>Chocolats et Bonbons</p></li>
+                                <li><p>Biscuit,Cookies,Gateaux</p></li>
+                                <li><p>Tartiner et Cereales</p></li>
+                                <li><p>Cake et Patisserie</p></li>
+                                <li><p>Pain</p></li>
+                                <li><p>Ble,Semoule,Farine</p></li>
+                                <li><p>Sucre,Preparation gateaux</p></li>
+                            </ul>
+                        </div>
+
+                        <!-- 6 -->
+                        <div class="Rayon-Container" (mouseenter)="Mousein('Epicerie Salée')" (mouseleave)="Mouseout()">
+                            <h1>Epicerie Salée</h1>
+                            <!-- <img src="../assets/images/navbar/salée.jpg"> -->
+                            <ul [@RayonContainerAnim]="RayonContainerDisplay && SelectedRayon=='Epicerie Salée' ? 'expanded' : 'collapsed'">
+                                <li><p>Pates,Riz,Nouilles</p></li>
+                                <li><p>Conserves et bocaux</p></li>
+                                <li><p>Sauce,Vinigraites,Ketchup</p></li>
+                                <li><p>Huile,Vinaigre,Olives</p></li>
+                                <li><p>Soupe,Boullions</p></li>
+                                <li><p>Snacks</p></li>
+                                <li><p>Sel,epices et herbes</p></li>
+                            </ul>
+                        </div>
+                    
+                        
+                    </div>
+                    <div class="Section">
+                        <!-- 7 -->
+                        <div class="Rayon-Container" (mouseenter)="Mousein('Surgelés')" (mouseleave)="Mouseout()">
+                                <h1>Surgelés</h1>
+                                <!-- <img src="../assets/images/navbar/surgele.jpg"> -->
+                                <ul [@RayonContainerAnim]="RayonContainerDisplay && SelectedRayon=='Surgelés' ? 'expanded' : 'collapsed'">
+                                    <li><p>Glaces</p></li>
+                                    <li><p>Plats Cuisiné</p></li>
+                                    <li><p>Poissons</p></li>
+                                    <li><p>Viande et voilaille</p></li>
+                                    <li><p>Legumes</p></li>
+                                    <li><p>Pates pizza,tarte</p></li>
+                                </ul>
+                            </div>
+                        <!-- <div class="Rayon-Container">Frais*</div> -->
+                        <!-- 8 -->
+                        <div class="Rayon-Container" (mouseenter)="Mousein('Fromagerie et Créme')" (mouseleave)="Mouseout()">
+                            <h1>Fromagerie et Créme</h1>
+                            <!-- <img src="../assets/images/navbar/fromage2.jpg"> -->
+                            <ul [@RayonContainerAnim]="RayonContainerDisplay && SelectedRayon=='Fromagerie et Créme' ? 'expanded' : 'collapsed'">
+                                <li><p>Lait,boissons lactées</p></li>
+                                <li><p>Beurres et Margarines</p></li>
+                                <li><p>Créme fraiche et echantilly</p></li>
+                                <li><p>Yaourts,Desserts</p></li>
+                                <li><p>Fromages</p></li>
+                                <li><p>Oeufs</p></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li><img src="../assets/images/navbar/heart.png"><a href="#" (click)="MenuDisplay('Livrer Moi')" (blur)="blur()">Livrer Moi</a>
+                <ul class="Livrer-Menu" 
+                [@ExpandMenuRayon]="(RayonsDisplay && SelectedMenu == 'Livrer Moi')? 'expanded' : 'collapsed'">
+                    <li>
+                        <div class="Livrer-Container">
+                            <div class="Livrer-InputS">
+                                <div class="Hrt-Img"><img src="../assets/images/navbar/heart.png"><span></span></div>
+                                <input type="text" class="" placeholder="Entrer l'adress de livraison">
+                                <div class="Srch-Img"><img src="../assets/images/navbar/Loupe.png"></div>
+                            </div>
+                            <div class="Livrer-Category">
+                                <div>
+                                    <p>Delivery</p>
+                                </div>
+                                <div>
+                                    <p>Pick up</p>
+                                </div>
+                                <span></span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="Label-NoLiveS">
+                        <p>Sorry Our Service is not provided in your area yet</p>
+                    </li>
+                </ul>
+            </li>
+            <li><img src="../assets/images/navbar/heart.png"><a href="#" (click)="MenuDisplay('Mes Favories')" (blur)="blur()">Mes Favories</a>
+                <ul class="Favori" hidden></ul>
+                <ul class="Favori-Client" hidden></ul>
+            </li>
+            <li><img src="../assets/images/navbar/heart.png"><a href="#" (click)="MenuDisplay('Me Connecter')" (blur)="blur()">Me Connocter</a>
+                <ul class="Connecter-Menu" 
+                [@ExpandMenuRayon]="(RayonsDisplay && SelectedMenu == 'Me Connecter')? 'expanded' : 'collapsed'">
+                    <li>
+                        <p class="font-bold">Deja un client !!</p>
+                    </li>
+                    <li>
+                        <div class="Login-Container">
+                            <button>Me Connecter</button>
+                            <p>Acceder a votre compte pour bénificier de tous les services</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="Signup-Container">
+                            <p class="font-bold">Pas encore Client!</p>
+                            <a href="#">► Me creer un compte</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="Subscribe-Container">
+                            <div class="text">
+                                <div>
+                                    <span></span>
+                                </div>
+                                    <p>Ou s'incrire avec</p>
+                                <div>
+                                    <span></span>
+                                </div>
+                            </div>
+                            <div class="l">
+                                <a href="#"><img src="../assets/images/navbar/google.png"></a>
+                                <a href="#"><img src="../assets/images/navbar/facebook.png"></a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li class="li-others" (click)="MenuDisplay('Others')"><a href="#" (blur)="blur()">○○○</a>
+                    <ul class="Others-Menu" 
+                    [@ExpandMenuRayon]="(RayonsDisplay && SelectedMenu == 'Others')? 'expanded' : 'collapsed'">
+                        <li><img><a href="">Promotions</a></li>
+                        <li><img><a href="">Trends</a></li>
+                        <li><img><a href="">Our Custumers Love</a></li>
+                        <li><img><a href="">Deals</a></li>
+                        <li><img><a href="">Carte de Fidélité</a></li>
+                    </ul>
+            </li>
+        </ul>
+    </div>
+</div>

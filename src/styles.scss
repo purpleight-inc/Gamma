@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: #DEE1DC;
+    overflow-x: hidden;
+    //background: #E5E5E5;
+    app-root{
+        display: grid;
+        grid-template-columns: repeat(48, 1fr);
+    }
+}

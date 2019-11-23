@@ -1,0 +1,260 @@
+<div class="items-Container">
+    <div class="items-Header"><p>Recommander pour vous</p></div>
+    <div class="items-Section">
+        <div class="item">
+            <div class="item-Header">
+                <p>Promotion</p>
+                <img src="../assets/images/itemsSection/bookmark.png" (click)="bookmarked = !bookmarked">
+                <!-- <img src="../assets/images/itemsSection/Heart.png"> -->
+            </div>
+            <div class="icon-Bar">
+                <div class="mention">
+                    <img src="../assets/images/itemsSection/sugar-free.png"> 
+                </div>
+                <div class="AddBasket">
+                    <img class="Cart" src="../assets/images/itemsSection/shoppingCart.png" (click)="ShowBasketControl()">
+                    <div class="BasketControl" 
+                        [ngStyle]="{'height.px' : this.emptyCart ? 0 : 30}">
+                        <div (click)="itemsQuantity('-')"><img src="../assets/images/itemsSection/minusSymbol.png"></div>
+                        <div><p>{{ ProductQuantity}}</p></div>
+                        <div (click)="itemsQuantity('+')"><img src="../assets/images/itemsSection/plusSymbol.png"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="Description">
+                <div class="Name"><a title="Camembert President"><p>Patamilka aux noisettes MILKA</p></a></div>
+                <div class="SousName"><p>pot de 600g</p></div>
+                <div class="Tarif"><p>800 Da</p></div>
+                <div class="AncienTarif"><p>350 Da</p></div>
+                <div class="Promo"><p>Prenez 3 = 1 offerte</p></div>
+            </div>
+        </div>  
+        <div class="item">
+            <div class="item-Header">
+                <!-- <p>Promotion</p> -->
+                <img src="../assets/images/itemsSection/bookmark.png">
+                <!-- <img src="../assets/images/itemsSection/Heart.png"> -->
+            </div>
+            <div class="icon-Bar">
+                <div class="mention">
+                    <img src="../assets/images/itemsSection/sugar-free.png"> 
+                </div>
+                <div class="AddBasket">
+                    <img class="Cart" src="../assets/images/itemsSection/shoppingCart.png">
+                    <div class="BasketControl">
+                        <div><img src="../assets/images/itemsSection/minusSymbol.png"></div>
+                        <div><p>0</p></div>
+                        <div><img src="../assets/images/itemsSection/plusSymbol.png"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="Description">
+                <div class="Name"><a title="Camembert President"><p>Patamilka aux noisettes MILKA</p></a></div>
+                <div class="SousName"><p>pot de 600g</p></div>
+                <div class="Tarif"><p>800 Da</p></div>
+                <!-- <div class="AncienTarif"><p>350 Da</p></div> -->
+                <!-- <div class="Promo"><p>Prenez 3 = 1 offerte</p></div> -->
+            </div>
+        </div>  
+        <div class="item">
+            <div class="item-Header">
+                <!-- <p>Promotion</p> -->
+                <img src="../assets/images/itemsSection/bookmark.png">
+                <!-- <img src="../assets/images/itemsSection/Heart.png"> -->
+            </div>
+            <div class="icon-Bar">
+                <div class="mention">
+                    <img src="../assets/images/itemsSection/sugar-free.png"> 
+                </div>
+                <div class="AddBasket">
+                    <img class="Cart" src="../assets/images/itemsSection/shoppingCart.png">
+                    <div class="BasketControl">
+                        <div><img src="../assets/images/itemsSection/minusSymbol.png"></div>
+                        <div><p>0</p></div>
+                        <div><img src="../assets/images/itemsSection/plusSymbol.png"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="Description">
+                <div class="Name"><a title="Camembert President"><p>Patamilka aux noisettes MILKA</p></a></div>
+                <div class="SousName"><p>pot de 600g</p></div>
+                <div class="Tarif"><p>800 Da</p></div>
+                <!-- <div class="AncienTarif"><p>350 Da</p></div> -->
+                <!-- <div class="Promo"><p>Prenez 3 = 1 offerte</p></div> -->
+            </div>
+        </div>  
+        <div class="item">
+            <div class="item-Header">
+                <!-- <p>Promotion</p> -->
+                <img src="../assets/images/itemsSection/bookmark.png">
+                <!-- <img src="../assets/images/itemsSection/Heart.png"> -->
+            </div>
+            <div class="icon-Bar">
+                <div class="mention">
+                    <img src="../assets/images/itemsSection/sugar-free.png"> 
+                </div>
+                <div class="AddBasket">
+                    <img class="Cart" src="../assets/images/itemsSection/shoppingCart.png">
+                    <div class="BasketControl">
+                        <div><img src="../assets/images/itemsSection/minusSymbol.png"></div>
+                        <div><p>0</p></div>
+                        <div><img src="../assets/images/itemsSection/plusSymbol.png"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="Description">
+                <div class="Name"><a title="Camembert President"><p>Patamilka aux noisettes MILKA</p></a></div>
+                <div class="SousName"><p>pot de 600g</p></div>
+                <div class="Tarif"><p>800 Da</p></div>
+                <!-- <div class="AncienTarif"><p>350 Da</p></div> -->
+                <!-- <div class="Promo"><p>Prenez 3 = 1 offerte</p></div> -->
+            </div>
+        </div>  
+        <div class="item">
+            <div class="item-Header">
+                <!-- <p>Promotion</p> -->
+                <img src="../assets/images/itemsSection/bookmark.png">
+                <!-- <img src="../assets/images/itemsSection/Heart.png"> -->
+            </div>
+            <div class="icon-Bar">
+                <div class="mention">
+                    <img src="../assets/images/itemsSection/sugar-free.png"> 
+                </div>
+                <div class="AddBasket">
+                    <img class="Cart" src="../assets/images/itemsSection/shoppingCart.png">
+                    <div class="BasketControl">
+                        <div><img src="../assets/images/itemsSection/minusSymbol.png"></div>
+                        <div><p>0</p></div>
+                        <div><img src="../assets/images/itemsSection/plusSymbol.png"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="Description">
+                <div class="Name"><a title="Camembert President"><p>Patamilka aux noisettes MILKA</p></a></div>
+                <div class="SousName"><p>pot de 600g</p></div>
+                <div class="Tarif"><p>800 Da</p></div>
+                <!-- <div class="AncienTarif"><p>350 Da</p></div> -->
+                <!-- <div class="Promo"><p>Prenez 3 = 1 offerte</p></div> -->
+            </div>
+        </div>  
+        <div class="item">
+            <div class="item-Header">
+                <!-- <p>Promotion</p> -->
+                <img src="../assets/images/itemsSection/bookmark.png">
+                <!-- <img src="../assets/images/itemsSection/Heart.png"> -->
+            </div>
+            <div class="icon-Bar">
+                <div class="mention">
+                    <img src="../assets/images/itemsSection/sugar-free.png"> 
+                </div>
+                <div class="AddBasket">
+                    <img class="Cart" src="../assets/images/itemsSection/shoppingCart.png">
+                    <div class="BasketControl">
+                        <div><img src="../assets/images/itemsSection/minusSymbol.png"></div>
+                        <div><p>0</p></div>
+                        <div><img src="../assets/images/itemsSection/plusSymbol.png"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="Description">
+                <div class="Name"><a title="Camembert President"><p>Patamilka aux noisettes MILKA</p></a></div>
+                <div class="SousName"><p>pot de 600g</p></div>
+                <div class="Tarif"><p>800 Da</p></div>
+                <!-- <div class="AncienTarif"><p>350 Da</p></div> -->
+                <!-- <div class="Promo"><p>Prenez 3 = 1 offerte</p></div> -->
+            </div>
+        </div>  
+        <div class="item">
+            <div class="item-Header">
+                <!-- <p>Promotion</p> -->
+                <img src="../assets/images/itemsSection/bookmark.png">
+                <!-- <img src="../assets/images/itemsSection/Heart.png"> -->
+            </div>
+            <div class="icon-Bar">
+                <div class="mention">
+                    <img src="../assets/images/itemsSection/sugar-free.png"> 
+                </div>
+                <div class="AddBasket">
+                    <img class="Cart" src="../assets/images/itemsSection/shoppingCart.png">
+                    <div class="BasketControl">
+                        <div><img src="../assets/images/itemsSection/minusSymbol.png"></div>
+                        <div><p>0</p></div>
+                        <div><img src="../assets/images/itemsSection/plusSymbol.png"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="Description">
+                <div class="Name"><a title="Camembert President"><p>Patamilka aux noisettes MILKA</p></a></div>
+                <div class="SousName"><p>pot de 600g</p></div>
+                <div class="Tarif"><p>800 Da</p></div>
+                <!-- <div class="AncienTarif"><p>350 Da</p></div> -->
+                <!-- <div class="Promo"><p>Prenez 3 = 1 offerte</p></div> -->
+            </div>
+        </div>  
+        <div class="item">
+            <div class="item-Header">
+                <!-- <p>Promotion</p> -->
+                <img src="../assets/images/itemsSection/bookmark.png">
+                <!-- <img src="../assets/images/itemsSection/Heart.png"> -->
+            </div>
+            <div class="icon-Bar">
+                <div class="mention">
+                    <img src="../assets/images/itemsSection/sugar-free.png"> 
+                </div>
+                <div class="AddBasket">
+                    <img class="Cart" src="../assets/images/itemsSection/shoppingCart.png">
+                    <div class="BasketControl">
+                        <div><img src="../assets/images/itemsSection/minusSymbol.png"></div>
+                        <div><p>0</p></div>
+                        <div><img src="../assets/images/itemsSection/plusSymbol.png"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="Description">
+                <div class="Name"><a title="Camembert President"><p>Patamilka aux noisettes MILKA</p></a></div>
+                <div class="SousName"><p>pot de 600g</p></div>
+                <div class="Tarif"><p>800 Da</p></div>
+                <div class="AncienTarif"><p>350 Da</p></div>
+                <div class="Promo"><p>Prenez 3 = 1 offerte</p></div>
+            </div>
+        </div>  
+    <div class="items-Header"><span></span><p>Produits journaliers</p></div>
+    <div class="items-Section">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item" [hidden]="!ShowMore"></div>
+        <div class="item" [hidden]="!ShowMore"></div>
+        <div class="item" [hidden]="!ShowMore"></div>
+        <div class="item" [hidden]="!ShowMore"></div>
+        <div *ngIf="!ShowMore" class="More" (click)="ShowMore = !ShowMore"><p>More</p></div>
+    </div>
+    <div class="items-Header"><span></span></div>
+    <div class="items-Section">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="pub"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+    <div class="items-Header"></div>
+</div>

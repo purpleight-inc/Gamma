@@ -1,0 +1,492 @@
+.Custom-Navbar{
+    position: relative;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 130px;
+    box-sizing: border-box;
+    font-family: 'Open sans' ,sans-serif;
+    color: Black;
+    text-decoration: none;
+    font-size: 1.1em;
+    background: #B09F8D;
+    grid-column: 1 / 47;
+    display: grid;
+    grid-template-columns: 16% 42% 42%;
+    grid-template-rows: 65% 35%;
+    //opacity: 0.9;
+    .logo {
+        float: left;
+        display: flex;
+        padding: 1em 3em;
+        flex-direction: column;
+        grid-row: 1 / 3;
+
+        .img-nav{
+            position: relative;
+            height: 50px;
+            width: 50px;
+            object-fit: cover;
+        }
+        a{
+            color: #56494C;
+            transition: .5s;
+
+        }
+    }
+    
+    .Head-nav{
+        position: relative;
+        display: flex;
+        grid-column: 2 / 4;
+        .SearchB{
+            position: relative;
+            margin: 20px 0px 18px 0px;
+            width: 525px;
+            height: 40px;
+            background: #f1f1f1;
+            border-radius: 42px / 100%;
+            box-shadow: 0 0 5px 0.5px rgba(0, 0, 0, 0.25);
+            z-index: 100;
+            display: flex;
+
+            .SearchIn{
+                position: relative;
+                width: auto;
+                border: none;
+                opacity: 0.7;
+                flex-grow: 1;
+                padding: 0 15px;
+                background: transparent;
+
+                &:focus{
+                    outline:none;
+                }
+            }
+            .SearchItems-Container{
+                position: absolute;
+                width: 100%;
+                top:100%;
+                height: auto;
+                max-height: 70vh;
+                padding: 1% 3% 2% 3%;
+                background: #f1f1f1;
+                display: flex;
+                z-index: 1;
+                flex-direction: column;
+                justify-content: space-between;
+                border-radius: 0% 0% 25px 25px / 25px;
+                //box-shadow: 0 0 100vw 100vw rgba(0,0,0,0.25);
+                a{
+                    margin: 0;
+                    text-decoration: none;
+                    color: rgba(0, 0, 0, 0.7);
+                    font-weight: 600;
+                    padding: 10px 0;
+                    border-top: 1.5px solid rgba(0, 0, 0, 0.25);
+                    &:hover{
+                        text-decoration: none;
+                        color: rgba(0, 0, 0, 0.7);
+                        background: rgba(0, 0, 0, 0.05);
+                    }
+                }
+            }
+            .Img-Container{
+                position: relative;
+                max-width: 36px;
+                height: 36px;
+                flex-grow:1;
+                align-self: center;
+                right: 3px;
+                background: rgba(0, 0, 0, 0.1);
+                border-radius: 50%;
+
+                img {
+                    position: relative;
+                    width: 30px;
+                    height: 30px;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                    object-fit: cover;
+                }
+                img:hover{
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .Basket{
+            box-sizing: border-box;
+            margin-left: auto;
+            padding: 0.9em 1.7em 0 0;
+            img {
+                width: 2.5em;
+                height: 2.5em;
+                object-fit: cover;
+            }
+        }
+    }
+
+    .Container-NavItems{
+        //position: relative;
+        width: 100%;
+        height: 100%;
+        grid-column: 2 / 4;
+        
+        .NavItems{
+            height: 100%;
+            margin: 0;
+            bottom: 15%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 0 1.5vw 1vh 0;
+        }
+/*----------------Css du Menu Nos Rayons----------------*/
+
+        .NosRayons-Menu{
+            position: absolute;
+            width: 100%;
+            height: auto;
+            top: 100%;
+            left: 0;
+            padding: 5vh 12vh 0 4vh;
+            box-sizing: border-box;
+            background: #9FA4A9;
+            display: grid;
+            grid-template-columns: 100%;
+            overflow: hidden;
+            border-radius: 0% 0% 2% 2%;
+            z-index: 10;
+            .Section{
+                display: flex;
+                .Rayon-Container{
+                    position: relative;
+                    flex-grow: 2;
+                    height: 150px;
+                    width: 1px;
+                    max-width: 30%;
+                    margin: 0 1.2vw 2vh 0;
+                    background: linear-gradient(to left,#eacda3 , #d6ae7b);
+                    transition: all 1s ease;
+                    overflow: hidden;
+                    box-shadow: 0 0 5px 0.5px rgba(0, 0, 0, 0.25);
+                    &:hover{
+                        width: 550px;
+                        height: 280px;
+                        max-width:550px;
+                        h1{
+                            font-size: x-large;
+                            height: 18%;
+                        }
+                        ul{
+                            li{
+                            width: 50%;
+                            }
+                        }
+                    }
+                    // img{
+                    //     position: absolute;
+                    //     object-fit: cover;
+                    //     // top:0;
+                    //     left:0;
+                    //     width:100%;
+                    //     height:100%;
+                    //     margin: 0;
+                    //     transition: all 1s ease;
+                    //     filter: blur(0px);
+                    // }
+                    h1{
+                        position: relative;
+                        min-height: 18%;
+                        height:auto;
+                        padding: 10px 2px 0 10px;
+                        font-size: large;
+                        font-weight: 600;
+                        transition: all 1s ease;
+                        text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.25);
+                    }
+                    ul{
+                        position: relative;
+                        height: 80%;
+                        width: 100%;
+                        display: flex;
+                        flex-wrap: wrap;
+                        box-sizing: border-box;
+                        flex-direction: column;
+                        padding: 2px 10px 2% 10px;
+                        opacity:0;
+                        li{
+                            flex-grow: 1;
+                            width: 50%;
+                            min-height: 20%;
+                            max-height: 25%;
+                            padding: 10px 10px 0 10px;
+                            transition: all 1s ease;
+                            p{
+                                font-size: medium;
+                                margin: 0;
+                            }
+                        }
+                    }
+                }
+            }
+            img {
+                position: absolute;
+                right: 3%;
+                width: 1.2vw;
+                height: 1.2vw;
+                object-fit: cover;
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+            span{
+                position: absolute;
+                left:0;
+                top: 0;
+                margin: 10px 5%;
+                width: 90%;
+                height: 1.8px;
+                background: rgba(0, 0, 0, 0.25);
+                border-radius: 15px;
+                box-shadow: 0 0 0px 0.15px rgba(0, 0, 0, 0.25);
+            }
+        }
+
+/*----------------Css du Menu Livrer Moi----------------*/
+        .Livrer-Menu{
+            position: absolute;
+            width: 380px;
+            height: 190px;
+            top: 100%;
+            transform: translateX(-25%); 
+            padding: 30px 1.2vw 0 1.2vw;
+            box-sizing: border-box;
+            background: #9FA4A9;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            border-radius: 0% 0% 4% 4%;
+            z-index: 10;
+            .Livrer-InputS{
+                position: relative;
+                background: blanchedalmond;
+                display: flex;
+                input{
+                    position: relative;
+                    width: 75%;
+                    height: 45px;
+                    border-style: none;
+                    border-width: 0px;
+                    padding: 5px 5px 5px 10px;
+                    opacity: 0.7;
+                    background: none;
+                    &:focus{outline:none;}
+                }
+                .Srch-Img{
+                    position: relative;
+                    flex-grow: 1;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+                    padding-right: 10px;
+                    background: rgba(0, 0, 0, 0.1);s
+                    img{
+                        width: 26px;
+                        height: 26px;
+                    }
+                }
+                .Hrt-Img{  
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    padding:0 15px 0 13px;
+                    img{
+                        width: 26px;
+                        height: 26px;
+                    }
+                }
+                span{
+                    position: absolute;
+                    height: 70%;
+                    width: 2px;
+                    right: 0;
+                    top: 15%;
+                    background: black;
+                    opacity: 0.3;
+                    border-radius: 20% / 80%;
+                }
+            }
+            .Livrer-Category{
+                position: relative;
+                div{
+                    display: inline-block;
+                    width: 50%;
+                    height: 60px;
+                    background: lavender;
+                    border: none;
+                    p{
+                        position: relative;
+                        text-align: center;
+                        top: 50%;
+                        transform: translateY(-50%);
+                    }
+                    &:hover{
+                        cursor: pointer;
+                    }
+                }
+                span{
+                    position: absolute;
+                    background: #56494C;
+                    bottom:0;
+                    left:0;
+                    width: 50%;
+                    height: 3px;
+                }   
+            }
+            .Label-NoLiveS{
+                font-size: small;
+                color: #BF0000;
+                margin: 0;
+                padding-top: 10px;
+                text-align: center;
+            }
+        }
+
+/*----------------Css du Menu Me Connecter----------------*/
+        .Connecter-Menu{
+            position: absolute;
+            width: 360px;
+            height: auto;
+            top: 100%;
+            right: 2%;
+            padding: 30px 1vw 15px 1vw;
+            box-sizing: border-box;
+            background: #9FA4A9;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            border-radius: 0% 0% 4% 4%;
+            z-index: 10;
+            .font-bold{
+                font-weight: 600;
+                color: #56494C;
+                margin: 0;
+            }
+            .Login-Container{
+                button{
+                position: relative;
+                border-style: none;
+                width: 180px;
+                height:35px;
+                left: 50%;
+                transform: translateX(-50%);
+                margin-top: 20px;
+                border-radius: 10% / 50%;
+                &:focus{outline: 0;}
+                }
+                p{
+                    font-size: 15px;
+                    padding: 0 2.3vw;
+                    text-align: center;
+                }
+            }
+            .Signup-Container{
+                padding: 3px;
+                a{
+                    padding: 0 0 0 25px;
+                    font-size: 16px;
+                }
+            }
+            .Subscribe-Container{
+                padding-top: 10px;
+                position: relative;
+                .text{
+                    display: flex;
+                    div{
+                        flex-grow: 1;
+                        position: relative;
+                        span{
+                            position: absolute;
+                            height: 2px;
+                            width: 100%;
+                            top: 50%;
+                            background: black;
+                            opacity: 0.3;
+                            border-radius: 15px;
+                        }
+                    }
+                    p{
+                        margin: 0 8px;
+                        text-align: center;
+                        font-size: 15px;
+                    }
+                }
+                .l{
+                    padding: 10px 70px;
+                    display: flex;
+                    justify-content: space-around;
+                    img{
+                        height: 2.8vw;
+                        width: 2.8vw;
+                        object-fit: cover;
+                    }
+                    a{padding: 0;}
+                }
+            }
+        }
+    
+/*----------------Css du Menu Others----------------*/
+        .Others-Menu{
+            position: absolute;
+            width: 260px;
+            height: 260px;
+            top: 100%;
+            right: 0;
+            padding: 0 1vw 5px 1vw;
+            box-sizing: border-box;
+            background: #9FA4A9;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            overflow: hidden;
+            border-radius: 0% 0% 4% 4%;
+            z-index: 10;
+            li{ 
+                padding: 0 0 5.5px 0;
+                border-bottom: 1.4px solid rgba(68, 73, 78, 0.4);
+            }
+        }
+        .li-others{
+            &:hover{
+            cursor: pointer;
+            }
+            p{
+                margin: 0;
+            }
+        }
+
+
+        
+        li{
+            list-style: none;
+            img {
+                width: 1.5em;
+                height: 1.5em;
+                object-fit: cover;
+            }
+
+            a{
+                //line-height: 80px;
+                color: #56494C;
+                padding: 0 1.7em 0 0.3em;
+            }
+        }
+    }
+    a:hover{
+        text-decoration: none;
+    }
+}
+
