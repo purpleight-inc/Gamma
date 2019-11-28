@@ -9,6 +9,7 @@ import { SidenavComponent } from './sidenav/sidenav.component';
 import { SectionComponent } from './section/section.component';
 import { ItemsSectionComponent } from './items-section/items-section.component';
 import { FooterObservDirective } from './footer-observ.directive';
+import { LoadObservDirective } from './load-observ.directive';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { FooterObservDirective } from './footer-observ.directive';
     SidenavComponent,
     SectionComponent,
     ItemsSectionComponent,
-    FooterObservDirective
+    FooterObservDirective,
+    LoadObservDirective
   ],
   imports: [
     BrowserModule,

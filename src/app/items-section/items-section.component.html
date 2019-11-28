@@ -255,6 +255,7 @@
         <div class="item"></div>
         <div class="item"></div>
         <div class="item"></div>
+        <div *ngFor="let i of items" class="item"></div></div>
     </div>
-    <div class="items-Header"></div>
+    <div appLoadObserv class="items-Header" (DisplayMoreitems)="DisplayMoreitems($event)"></div>
 </div>

@@ -11,11 +11,15 @@ export class ItemsSectionComponent implements OnInit {
   emptyCart: boolean;
   ProductQuantity: number;
   ShowMore: boolean;
+  items: number[];
+  Moreitems: boolean;
 
   constructor() { 
     this.ProductQuantity = 0;
     this.ShowMore = false;
     this.emptyCart= true;
+    this.Moreitems = false;
+    this.items = [];
   }
 
   ngOnInit() {
@@ -35,6 +39,11 @@ export class ItemsSectionComponent implements OnInit {
   itemsQuantity(op : string){
     op == '+' ? this.ProductQuantity++ : this.ProductQuantity--;
     if(this.ProductQuantity < 0) this.ProductQuantity = 0;
+  }
+
+  DisplayMoreitems(Moreitems: boolean){
+    this.Moreitems = Moreitems;
+    if(this.Moreitems == true) this.items.push(1,2,3,4,5,6,7,8);
   }
 
 }
