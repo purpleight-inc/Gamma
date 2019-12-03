@@ -1,0 +1,45 @@
+.DecouvrirRayon-Container{
+    position: relative;
+    width: 74vw;
+    height: 265px;
+    background: #F4F7F2;
+    margin-left: 3%;
+    border-bottom-left-radius: 5px;
+    display: flex;
+    user-select: none;
+    // background: url("../../assets/images/section/meat&fish.jpg") center/cover no-repeat;
+
+    img{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        object-position: center;
+        object-fit: cover;
+        border-bottom-left-radius: 5px;
+        filter: blur(0px) saturate(85%) brightness(90%);
+    }
+    
+    .SousSection{
+        position: absolute;
+        width: 60%;
+        height: 110px;
+        bottom: 0;
+        left: 8%;
+        background: #F4F7F2;
+        border-radius: 15px 15px 0px 0px;
+        opacity: 95%;
+        h1,h2{
+            font-size: 1.9em;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            transform: translate(-40%, -50%);
+            font-weight: 700;
+        }
+        h2{
+            font-size: 1.8em;
+        }
+        
+    }
+}

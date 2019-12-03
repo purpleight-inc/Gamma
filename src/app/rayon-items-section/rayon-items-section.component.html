@@ -1,0 +1,93 @@
+<div class="items-Container">
+    <div class="SectionFilter">
+        <div class="Filter" (click)="ChangeFilterSign('Prix')">
+            <div>
+                <span class="span1" 
+                    [@ChangeSign]="  AssignFilter('Prix') == '' ? 'show' : 'hide' ">▲</span>
+                <span class="span2"
+                        [@ChangeSign]="  AssignFilter('Prix') == '' ? 'show' : 'hide'" >▼</span>
+                <span class="span3" 
+                        [@ChangeSign]="  AssignFilter('Prix') == '-' ? 'show' : 'hide'"></span>
+                <span class="span4"
+                        [@ChangeSign]="  AssignFilter('Prix') == '-' ? 'show' : 'hide'" ></span>
+                <span class="span5" 
+                        [@ChangeSign]="  AssignFilter('Prix') == '+' ? 'show' : 'hide'"></span>
+                <span class="span6" 
+                        [@ChangeSign]="  AssignFilter('Prix') == '+' ? 'show' : 'hide'"></span>
+            </div>
+            <p>Prix</p>
+        </div>
+        <div class="Filter" (click)="ChangeFilterSign('Marques')">
+            <div>
+                <span class="span1" 
+                      [@ChangeSign]=" AssignFilter('Marques') == '' ? 'show' : 'hide' ">▲</span>
+                <span class="span2"
+                      [@ChangeSign]=" AssignFilter('Marques') == '' ? 'show' : 'hide'" >▼</span>
+                <span class="span3" 
+                      [@ChangeSign]=" AssignFilter('Marques') == '-' ? 'show' : 'hide'"></span>
+                <span class="span4"
+                      [@ChangeSign]=" AssignFilter('Marques') == '-' ? 'show' : 'hide'" ></span>
+                <span class="span5" 
+                      [@ChangeSign]=" AssignFilter('Marques') == '+' ? 'show' : 'hide'"></span>
+                <span class="span6" 
+                      [@ChangeSign]=" AssignFilter('Marques') == '+' ? 'show' : 'hide'"></span>
+            </div>
+            <p>Marques</p>
+        </div>
+        <div class="Filter" (click)="ChangeFilterSign('TopVentes')">
+            <div>
+                <span class="span1" 
+                    [@ChangeSign]=" AssignFilter('TopVentes') == '' ? 'show' : 'hide' ">▲</span>
+                <span class="span2"
+                        [@ChangeSign]=" AssignFilter('TopVentes') == '' ? 'show' : 'hide'" >▼</span>
+                <span class="span3" 
+                        [@ChangeSign]=" AssignFilter('TopVentes') == '-' ? 'show' : 'hide'"></span>
+                <span class="span4"
+                        [@ChangeSign]=" AssignFilter('TopVentes') == '-' ? 'show' : 'hide'" ></span>
+                <span class="span5" 
+                        [@ChangeSign]="AssignFilter('TopVentes') == '+' ? 'show' : 'hide'"></span>
+                <span class="span6" 
+                        [@ChangeSign]="AssignFilter('TopVentes') == '+' ? 'show' : 'hide'"></span>
+            </div>
+            <p>Top Ventes</p>
+        </div>
+        <div class="Filter">
+            <div>
+                
+            </div>
+            <p>Pertinence</p>
+        </div>
+        <span class="span3"></span>
+    </div>
+    <div class="items-Section">
+        <div *ngFor="let i of items" class="item">
+            <div class="item-Header">
+                <p>Promotion</p>
+                <img src="../assets/images/itemsSection/bookmark.png" (click)="bookmarked = !bookmarked">
+                <!-- <img src="../assets/images/itemsSection/Heart.png"> -->
+            </div>
+            <div class="icon-Bar">
+                <div class="mention">
+                    <img src="../assets/images/itemsSection/sugar-free.png"> 
+                </div>
+                <div class="AddBasket">
+                    <img class="Cart" src="../assets/images/itemsSection/shoppingCart.png" (click)="ShowBasketControl()">
+                    <div class="BasketControl" 
+                        [ngStyle]="{'height.px' : this.emptyCart ? 0 : 30}">
+                        <div (click)="itemsQuantity('-')"><img src="../assets/images/itemsSection/minusSymbol.png"></div>
+                        <div><p>{{ ProductQuantity}}</p></div>
+                        <div (click)="itemsQuantity('+')"><img src="../assets/images/itemsSection/plusSymbol.png"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="Description">
+                <div class="Name"><a title="Camembert President"><p>Patamilka aux noisettes MILKA</p></a></div>
+                <div class="SousName"><p>pot de 600g</p></div>
+                <div class="Tarif"><p>800 Da</p></div>
+                <div class="AncienTarif"><p>350 Da</p></div>
+                <div class="Promo"><p>Prenez 3 = 1 offerte</p></div>
+            </div>
+        </div>
+    </div>
+    <div appLoadObserv class="SectionFilter" (DisplayMoreitems)="DisplayMoreitems($event)"></div>
+</div>

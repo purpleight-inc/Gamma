@@ -20,6 +20,9 @@ export class ItemsSectionComponent implements OnInit {
     this.emptyCart= true;
     this.Moreitems = false;
     this.items = [];
+    for(let i=1; i<=8; i++){ 
+      this.items.push(i);
+    }
   }
 
   ngOnInit() {

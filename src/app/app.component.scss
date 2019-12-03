@@ -1,16 +1,13 @@
+app-landing-page{
+    grid-column: 1/49;
+    display: grid;
+    grid-template-columns: repeat(48, 1fr);
+}
+app-rayons{
+    grid-column: 1/49;
+    display: grid;
+    grid-template-columns: repeat(48, 1fr);  
+}
 app-nav-bar{
     grid-column: 1/49;
-}
-app-slider{
-    grid-column: 1/49;
-}
-app-sidenav{
-    grid-column: 1/12;
-    grid-row: 3 / 5;
-}
-app-section{
-    grid-column: 12/49;
-}
-app-items-section{
-    grid-column: 12/49;
 }

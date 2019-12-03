@@ -1,0 +1,7 @@
+<div class="DecouvrirRayon-Container">
+    <img [src]="findImg(Rayon)">
+    <div class="SousSection">
+        <h1 *ngIf="SousRayon == null ">{{ Rayon }}</h1>
+        <h2 *ngIf="SousRayon != null "> {{ SousRayon }} </h2>
+    </div>
+</div>

@@ -1,0 +1,106 @@
+<div class="Sidenav-Container">
+    <div class="Rayons-Container">
+        <div class="Rayon" *ngFor="let Ra of Rayons">
+            <div (click)=HideRayon(Ra.Rayon) class="Rayon-Container" [@HideRayon]="RayonDisplay && SelectedRayon != Ra.Rayon ? 'collapsed' : 'expanded'">
+                <p>{{ Ra.Rayon }}</p>
+                <span class="spandownl" [ngStyle]="{'transform' : RayonDisplay && SelectedRayon == Ra.Rayon ? 'translateX(0%) rotate(45deg)' : 'translateX(34%) rotate(-45deg)'}"></span>
+                <span class="spandownr" [ngStyle]="{'transform' : RayonDisplay && SelectedRayon == Ra.Rayon ? 'translateX(0%) rotate(-45deg)' : 'translateX(-34%) rotate(45deg)'}"></span>
+            </div>
+            <div class="SousRayon" [@DisplayMenu]="RayonDisplay && SelectedRayon == Ra.Rayon ? 'expanded' : 'collapsed'">
+                <ng-container *ngFor="let SR of Ra.Sous_Rayon; let i = index">
+                    <div class="SousRayon-Container" routerLinkActive="active" 
+                        [routerLinkActiveOptions]="{exact:true}" *ngIf="i == 0">
+                        <p><a [routerLink]="['/Rayons',Ra.Rayon]">Tous les produits</a></p>
+                    </div>
+                    <div class="SousRayon-Container" routerLinkActive="active">
+                        <p><a [routerLink]="['/Rayons',Ra.Rayon,SR]">{{ SR }}</a></p>
+                    </div>
+                </ng-container>
+            </div>
+        </div>
+        <span class="separate"></span>
+    </div>
+    <form class="Filter-Container">
+        <div class="Filter-Header">
+            <p>Affiner par:</p>
+        </div>
+        <div class="Filter-Section">
+            <div class="Filter-Type">
+                <p>Statut</p>
+                <div class="Check">
+                    <input type="checkbox" id="Nv" name="Nv" />
+                    <label for="Nv" >Nouveaux</label>
+                </div>
+                <div class="Check">
+                    <input type="checkbox" id="Pr" name="Pr" />
+                    <label for="Pr">Promotion</label>
+                </div>
+                <div class="Check">
+                    <input type="checkbox" id="AF" name="Pr" />
+                    <label for="AF">Avantage Fidélité</label>
+                </div>
+                <span></span>
+            </div>
+            <div class="Filter-Type">
+                <p>Fabrication</p>
+                <div class="Check">
+                    <input type="checkbox" id="Dz" name="Nv" />
+                    <label for="Dz" >Algerie</label>
+                </div>
+                <div class="Check">
+                    <input type="checkbox" id="Fr" name="Pr" />
+                    <label for="Fr">France</label>
+                </div>
+                <div class="Check">
+                    <input type="checkbox" id="Es" name="Pr" />
+                    <label for="Es">Espagne</label>
+                </div>
+                <div class="Check">
+                    <input type="checkbox" id="Uk" name="Pr" />
+                    <label for="Uk">England</label>
+                </div>
+                <div class="Check">
+                    <input type="checkbox" id="It" name="Pr" />
+                    <label for="It">Italy</label>
+                </div>
+                <span></span>
+            </div>
+            <div class="Filter-Type">
+                <p>Marques</p>
+                <div class="Check">
+                    <input type="checkbox" id="Dn" name="Nv" />
+                    <label for="Dn">Dani</label>
+                </div>
+                <div class="Check">
+                    <input type="checkbox" id="Jz" name="Pr" />
+                    <label for="Jz">Jazar</label>
+                </div>
+                <div class="Check">
+                    <input type="checkbox" id="Ft" name="Pr" />
+                    <label for="Ft">ElFeth</label>
+                </div>
+                <span></span>
+            </div>
+            <div class="Filter-Type">
+                <p>Label</p>
+                <div class="Check">
+                    <input type="checkbox" id="SS" name="Nv" />
+                    <label for="SS" >Sans Sucre</label>
+                </div>
+                <div class="Check">
+                    <input type="checkbox" id="SC" name="Pr" />
+                    <label for="SC">Sans Conservateurs</label>
+                </div>
+                <div class="Check">
+                    <input type="checkbox" id="SA" name="Pr" />
+                    <label for="SA">Sans Aromes Artificielle</label>
+                </div>
+                <div class="Check">
+                    <input type="checkbox" id="SG" name="Pr" />
+                    <label for="SG">Sans Gluten</label>
+                </div>
+                <span></span>
+            </div>
+        </div>
+    </form>
+</div>
